@@ -1,0 +1,284 @@
+body {
+    width:1200px;
+    min-width: 400px;
+    font-size:26px;
+    color:#445162;
+}
+.header {
+  background:#445162;
+  max-width: 1200px;
+  width: 100%;
+  min-width: 600px;
+  height: 400px;
+  color:white;
+  padding: 10px;
+  margin: 0 auto;
+
+}
+
+.header-right{
+  width: 450px;
+  height:250px;
+  background-color: white;
+  position:absolute;
+  left:700px;
+  top:100px;
+
+}
+.container-right{
+  width: 450px;
+  height:250px;
+  background-color: #445162;
+  position:relative;
+  left:700px;
+  top:-150px;
+
+}
+.container {
+  max-width: 450px;
+  width:100%;
+  min-width: 200px;
+  height: 400px;
+  background-color: white;
+  position: relative;
+}
+
+p {
+  font-size: 16px;
+}
+.logo{
+   float:right;
+   width:30%;
+   padding:5px;
+   color:white;
+   right:125px;
+   position: relative;
+   bottom:245px;
+}
+.block-left{
+  position: relative;
+  width:30%;
+
+}
+
+.logo-item{
+display:block;
+}
+
+.footer-icon {
+  font-size: 16px;
+}
+.logo .logo-wraper{
+  background-color: #445162;
+  margin-right: 15px;
+}
+.contact {
+  max-width:1200px;
+  width:100%;
+  min-width: 350px;
+  height:400px;
+  background-color:#445162;
+  padding:10px;
+}
+
+.contact textarea{
+  width: 300px;
+  height: 100px;
+  margin-top:10px;
+}
+
+.contact input{
+  width: 300px;
+}
+.input {
+  position: relative;
+  left:px;
+  width:100px;
+  height:60px;
+ border-radius: 10px, 10px, 10px, 10px;
+
+}
+.send input{
+border-radius: 10px, 10px, 10px, 10px;
+width: 50px;
+height: 20px;
+}
+
+h3{
+  color:white;
+  margin-left: 600px;
+}
+.feedback,
+input,
+textarea{
+  margin-left:200px;
+  border-radius: 5px, 5px, 5px, 5px;
+}
+
+.footer{
+  width:auto;
+  height:8px;
+  background-color: white;
+  font-size: 12px;
+  text-align: center;
+  color:#445162;
+}
+
+.icons{
+  position: relative;
+  left:530px;
+  bottom:50px;
+}
+.icon {
+  position:absolute;
+  left:750px;
+  top:990px;
+  width:350px;
+  height:100px;
+  color:white;
+  background-color:#445162;
+
+
+}
+.icon a{
+  font-size: 24px;
+  text-decoration: none;
+  color:black;
+  width:30px;
+  height:60px;
+}
+
+.icons img{
+  display: inline;
+}
+
+.icons li{
+  list-style: none;
+  float: right;
+}
+
+
+.rate
+{
+  display: block;
+  overflow: hidden;
+  height: 26px;
+}
+
+.rate__input
+{
+  display: none;
+}
+
+
+.rate__star
+{
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: url("http://www.matim-dev.com/uploads/1/5/8/0/15804842/3163379_orig.png") top left no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.rate__star.rate__star:hover ~ .rate__input ~ .rate__star,
+.rate__input:checked ~ .rate__input ~ .rate__star
+{
+  background-position: 100% 0;
+}
+.slider__wrapper
+{
+  margin-top: 20px;
+  min-width: 600px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.slider{
+  width: 100%;
+  padding-bottom: 75%;
+  height: 0;
+  position: relative;
+  background-color: orange;
+  overflow: hidden;
+}
+
+.slider__control
+{
+  display: flex;
+  list-style: none;
+  position: absolute;
+  bottom: 20px;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
+
+.slider__control-value
+{
+  display: none;
+}
+
+.slider__control-label
+{
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+
+}
+
+.slider__control-item:not(:first-child)
+{
+  margin-left: 10px;
+}
+
+.slider__body
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  min-width: 100%;
+  align-items: stretch;
+  z-index: 1;
+  transition: transform 1s ease-out;
+  will-change: transform;
+}
+
+.slider__item
+{
+  flex: 0 0 100%;
+  background: transparent center no-repeat;
+  background-size:contain;
+}
+
+.slider__control-value[value="2"]:checked ~ .slider__body
+{
+  transform: translateX(-100%);
+}
+.slider__control-value[value="3"]:checked ~ .slider__body
+{
+  transform: translateX(-200%);
+}
+.slider__control-value[value="4"]:checked ~ .slider__body
+{
+  transform: translateX(-300%);
+}
+.slider__control-value[value="5"]:checked ~ .slider__body
+{
+  transform: translateX(-400%);
+}
+
+.slider__control-value[value="1"]:checked ~ .slider__control .slider__control-label--1,
+.slider__control-value[value="2"]:checked ~ .slider__control .slider__control-label--2,
+.slider__control-value[value="3"]:checked ~ .slider__control .slider__control-label--3,
+.slider__control-value[value="4"]:checked ~ .slider__control .slider__control-label--4,
+.slider__control-value[value="5"]:checked ~ .slider__control .slider__control-label--5{
+  background: yellowgreen;
+}
