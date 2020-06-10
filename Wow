@@ -1,0 +1,80 @@
+import random
+HANGMAN = (
+    """
+    -
+    
+    
+    
+    
+    """
+,
+    """
+        +
+    
+    
+    
+    
+        """
+    ,
+    """
+        +-
+    
+    
+    
+    
+        """
+    ,
+    """
+        +=
+    
+    
+    
+    
+        """
+    ,
+    """
+            +=+
+    
+    
+    
+    
+            """
+
+)
+MAX_WRONG = len(HANGMAN) -1
+WORDS = ("OVERUSED", "CLAM", "GUAM", "TAFFETA","PYTHON")
+word = random.choice(WORDS)
+so_far = "_"* len(word)
+wrong = 0
+used = []
+print("Добро пожаловать в игру Виселица. Удачи Вам!")
+while wrong < MAX_WRONG and so_far != word:
+    print(HANGMAN[wrong])
+    print("\nВы уже предлагали следующие буквы:\n",used)
+    print("\nОтгаданное вами в слове сейчас выглядит так:\n", so_far)
+    quess = input("\n\nВведите букву: ")
+    quess = quess.upper()
+    while quess in used:
+        print("Вы уже предлагали букву", quess)
+        quess = input("\n\nВведите букву: ")
+        quess = quess.upper()
+        used.append(quess)
+    if quess in word:
+        print("\nДА! Буква", quess, "есть в слове")
+        new = ""
+        for i in range(len(word)):
+            if quess == word[i]:
+                new += quess
+            else:
+                new += so_far[i]
+            so_far = new
+    else:
+        print("\nК сожалению, буквы", quess, "нет в слове.")
+        wrong += 1
+        if wrong == MAX_WRONG:
+            print(HANGMAN[word])
+            print("\nВас повесили")
+        else:
+            print("\nВы отгадали!")
+            print("\nБыло загадано слово", word)
+        input("\n\nНажмите Enter, чтобы выйти.")
